@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1560408060687297938}
   - component: {fileID: 8926225130688482710}
   - component: {fileID: 2878382677735173549}
+  - component: {fileID: 2230377654452890627}
   - component: {fileID: 2906435003568637333}
   - component: {fileID: 3004855159844603078}
   m_Layer: 0
@@ -94,12 +95,26 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1601467225833894430}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 21968afc7cf123244879dbc8efe722df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+--- !u!114 &2230377654452890627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1601467225833894430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16bf0f618b5c493439efe7b431baf849, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 3
+  dashForce: 4
 --- !u!70 &2906435003568637333
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
