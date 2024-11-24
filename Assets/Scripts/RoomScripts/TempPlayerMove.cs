@@ -9,8 +9,8 @@ public class TempPlayerMove : MonoBehaviour
 
     void Update()
     {
-        dir.x = Input.GetAxisRaw("Horizontal"); // Left/Right or A/D keys
-        dir.y = Input.GetAxisRaw("Vertical");   // Up/Down or W/S keys
+        dir.x = Input.GetAxisRaw("Horizontal"); 
+        dir.y = Input.GetAxisRaw("Vertical");   
     }
 
     void FixedUpdate()
