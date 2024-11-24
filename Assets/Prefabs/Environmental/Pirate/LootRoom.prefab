@@ -938,6 +938,14 @@ PrefabInstance:
       propertyPath: m_Tiles.Array.data[27].second.m_TileSpriteIndex
       value: 22
       objectReference: {fileID: 0}
+    - target: {fileID: 2837933812798382317, guid: 39231dd717d49b448b2b2e74b58ab1fe, type: 3}
+      propertyPath: m_Size.y
+      value: 0.13964128
+      objectReference: {fileID: 0}
+    - target: {fileID: 2837933812798382317, guid: 39231dd717d49b448b2b2e74b58ab1fe, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.06346914
+      objectReference: {fileID: 0}
     - target: {fileID: 3216500474611541148, guid: 39231dd717d49b448b2b2e74b58ab1fe, type: 3}
       propertyPath: m_Name
       value: LootRoom
@@ -965,6 +973,14 @@ PrefabInstance:
     - target: {fileID: 6268077789831033236, guid: 39231dd717d49b448b2b2e74b58ab1fe, type: 3}
       propertyPath: m_LocalPosition.y
       value: 2.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6490150696579579164, guid: 39231dd717d49b448b2b2e74b58ab1fe, type: 3}
+      propertyPath: m_Size.y
+      value: 0.116261885
+      objectReference: {fileID: 0}
+    - target: {fileID: 6490150696579579164, guid: 39231dd717d49b448b2b2e74b58ab1fe, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.07515884
       objectReference: {fileID: 0}
     - target: {fileID: 6840679438952822721, guid: 39231dd717d49b448b2b2e74b58ab1fe, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1073,6 +1089,14 @@ PrefabInstance:
     - target: {fileID: 8377729264690206570, guid: 39231dd717d49b448b2b2e74b58ab1fe, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 8419212513202472946, guid: 39231dd717d49b448b2b2e74b58ab1fe, type: 3}
+      propertyPath: m_Size.y
+      value: 0.12149529
+      objectReference: {fileID: 0}
+    - target: {fileID: 8419212513202472946, guid: 39231dd717d49b448b2b2e74b58ab1fe, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.07254214
       objectReference: {fileID: 0}
     - target: {fileID: 8923417052909980735, guid: 39231dd717d49b448b2b2e74b58ab1fe, type: 3}
       propertyPath: m_LocalPosition.x
