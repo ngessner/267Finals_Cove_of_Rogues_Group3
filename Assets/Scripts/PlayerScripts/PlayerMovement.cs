@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
 
         dash();
 
-        //add code to open chests
+        openChest();
     }
 
     private void movePlayer()
@@ -48,6 +48,24 @@ public class PlayerMovement : MonoBehaviour
         movementInput.y = Input.GetAxisRaw("Vertical");
 
         playerRB.velocity = movementInput * activeMovementSpeed;
+
+        flipPlayerSprite(movementInput);
+    }
+
+    private void flipPlayerSprite(Vector2 mvmtInput)
+    {
+        if(mvmtInput.x != 0)
+        {
+            if (mvmtInput.x > 0)
+            {
+                transform.localRotation = Quaternion.Euler(0, 0, 0);
+            }
+
+            else if (mvmtInput.x < 0)
+            {
+                transform.localRotation = Quaternion.Euler(0, 180, 0);
+            }
+        }
     }
 
     //basic dash code
@@ -79,5 +97,18 @@ public class PlayerMovement : MonoBehaviour
         {
             dashCooldownTimer -= Time.deltaTime;
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.CompareTag("Chest"))
+        {
+            //drop item on ground  
+        }
+    }
+
+    private void openChest()
+    {
+
     }
 }
