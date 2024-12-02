@@ -7,11 +7,12 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D playerRB;
     public float movementSpeed = 3f;
     public float dashForce = 4f;
+    private Animator animator;
 
     //used to change between dashing and normal movement
     private float activeMovementSpeed;
 
-    private Vector2 movementInput;
+    public Vector2 movementInput;
 
     private float dashTime = 0.5f;
     private float dashCooldown = 1f;
@@ -26,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         playerRB = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
         activeMovementSpeed = movementSpeed;
     }
 
@@ -47,26 +49,48 @@ public class PlayerMovement : MonoBehaviour
         movementInput.x = Input.GetAxisRaw("Horizontal");
         movementInput.y = Input.GetAxisRaw("Vertical");
 
+
+        if (movementInput.x == 0 && movementInput.y == 0)
+        {
+            animator.SetBool("isWalking", false);
+        }
+        else
+        {
+            animator.SetBool("isWalking", true);
+        }
+
+
+        // so anims don't default to zero
+        if (movementInput != Vector2.zero)
+        {
+            // for animator directions
+            animator.SetFloat("xInput", movementInput.x);
+            animator.SetFloat("yInput", movementInput.y);       
+        }
+
+
         playerRB.velocity = movementInput * activeMovementSpeed;
 
-        flipPlayerSprite(movementInput);
+        //flipPlayerSprite(movementInput);
     }
 
-    private void flipPlayerSprite(Vector2 mvmtInput)
-    {
-        if(mvmtInput.x != 0)
-        {
-            if (mvmtInput.x > 0)
-            {
-                transform.localRotation = Quaternion.Euler(0, 0, 0);
-            }
+    // removed due to it bugging the animations 
 
-            else if (mvmtInput.x < 0)
-            {
-                transform.localRotation = Quaternion.Euler(0, 180, 0);
-            }
-        }
-    }
+    //private void flipPlayerSprite(Vector2 mvmtInput)
+    //{
+    //    if(mvmtInput.x != 0)
+    //    {
+    //        if (mvmtInput.x > 0)
+    //        {
+    //            transform.localRotation = Quaternion.Euler(0, 0, 0);
+    //        }
+
+    //        else if (mvmtInput.x < 0)
+    //        {
+    //            transform.localRotation = Quaternion.Euler(0, 180, 0);
+    //        }
+    //    }
+    //}
 
     //basic dash code
     //may change
