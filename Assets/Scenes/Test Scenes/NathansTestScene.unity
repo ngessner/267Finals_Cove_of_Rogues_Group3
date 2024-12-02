@@ -131,7 +131,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 150707189}
-  - component: {fileID: 150707188}
   - component: {fileID: 150707190}
   - component: {fileID: 150707191}
   m_Layer: 0
@@ -141,25 +140,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &150707188
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 150707187}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07d97260d6de7644da150f0b7bea6c40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyRoom: {fileID: 0}
-  lootRoom: {fileID: 0}
-  exitRoom: {fileID: 0}
-  gridWidth: 2
-  gridHeight: 2
-  roomWidth: 18
-  roomHeight: 10
 --- !u!4 &150707189
 Transform:
   m_ObjectHideFlags: 0
@@ -694,32 +674,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &2067649106 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3705098297374183310, guid: cb5e388c4e146244ba5871a437a34942, type: 3}
-  m_PrefabInstance: {fileID: 1829279666609367306}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &2067649112
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2067649106}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 84f7e0be8203b4c4fafc11d5aff510f7, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1829279666609367306
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -728,10 +682,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1200085740756467533, guid: cb5e388c4e146244ba5871a437a34942, type: 3}
-      propertyPath: dashForce
-      value: 5.5
-      objectReference: {fileID: 0}
     - target: {fileID: 3705098297374183310, guid: cb5e388c4e146244ba5871a437a34942, type: 3}
       propertyPath: m_Name
       value: Player
@@ -779,10 +729,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3705098297374183310, guid: cb5e388c4e146244ba5871a437a34942, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2067649112}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb5e388c4e146244ba5871a437a34942, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

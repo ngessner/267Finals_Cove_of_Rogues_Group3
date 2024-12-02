@@ -39,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
         dash();
 
         openChest();
+        checkAnimation();
     }
 
     private void movePlayer()
@@ -48,16 +49,6 @@ public class PlayerMovement : MonoBehaviour
 
         movementInput.x = Input.GetAxisRaw("Horizontal");
         movementInput.y = Input.GetAxisRaw("Vertical");
-
-
-        if (movementInput.x == 0 && movementInput.y == 0)
-        {
-            animator.SetBool("isWalking", false);
-        }
-        else
-        {
-            animator.SetBool("isWalking", true);
-        }
 
 
         // so anims don't default to zero
@@ -133,6 +124,19 @@ public class PlayerMovement : MonoBehaviour
 
     private void openChest()
     {
+
+    }
+
+    private void checkAnimation()
+    {
+        if (movementInput.x == 0 && movementInput.y == 0)
+        {
+            animator.SetBool("isWalking", false);
+        }
+        else
+        {
+            animator.SetBool("isWalking", true);
+        }
 
     }
 }

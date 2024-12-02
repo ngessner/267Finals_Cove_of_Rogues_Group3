@@ -37,7 +37,7 @@ public class PlayerSoundManager : MonoBehaviour
     void SetFootstepClip()
     {
         // Assign the appropriate footstep sound based on the current scene
-        if (currentScene == "NathansTestScene")
+        if (currentScene == "PirateCampsLVL1")
         {
             currentFootstepClip = sandWalkEffect;
         }
