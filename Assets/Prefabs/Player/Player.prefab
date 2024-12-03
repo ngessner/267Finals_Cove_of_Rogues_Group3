@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 2325747471742812518}
   - component: {fileID: 9082062533684976090}
   - component: {fileID: 2141013053533306232}
+  - component: {fileID: 4760067994904475456}
+  - component: {fileID: 5355668941338447571}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -230,3 +232,33 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4760067994904475456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3705098297374183310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9eb53d50f6bc2e64987e864f1232f056, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  maxHealth: 200
+  projectileDamageTaken: 10
+  meleeDamageTaken: 15
+  bossDamageMultiplier: 2
+--- !u!114 &5355668941338447571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3705098297374183310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5abe644d893653444ba48e1692514b16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponHoldLocation: {fileID: 0}

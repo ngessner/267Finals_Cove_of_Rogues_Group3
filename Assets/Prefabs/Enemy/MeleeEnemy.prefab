@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f06bb91695590384cb930b795af1c693, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sword: {fileID: 7422239403811363299}
   moveSpeed: 3
   attackRange: 1
   attackSpeed: 0
@@ -213,5 +214,10 @@ PrefabInstance:
 --- !u!4 &1031014744452520117 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5325594787348344976, guid: 3714bda57fffa2e43ad46309d4037695, type: 3}
+  m_PrefabInstance: {fileID: 5163014463529003045}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7422239403811363299 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2353026510657221062, guid: 3714bda57fffa2e43ad46309d4037695, type: 3}
   m_PrefabInstance: {fileID: 5163014463529003045}
   m_PrefabAsset: {fileID: 0}
