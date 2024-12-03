@@ -7,8 +7,10 @@ public class PlayerWeaponHandler : MonoBehaviour
     public GameObject weaponHoldLocation;
     public GameObject bulletObj;
     public Transform currentFirePoint;
-    public PlayerMovement playerMove; 
+    public PlayerMovement playerMove;
+    public GunViewManager gunView;
 
+    public ParticleManager particle;
 
     //different depending on the weapon
     [SerializeField] private int weaponAmmo;
@@ -38,7 +40,8 @@ public class PlayerWeaponHandler : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0) && weaponAmmo > 0) 
         {
-            fireWeapon();        
+            fireWeapon();
+            gunView.playGunParticles();
         }
     }
 

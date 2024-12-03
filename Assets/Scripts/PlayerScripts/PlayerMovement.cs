@@ -70,27 +70,7 @@ public class PlayerMovement : MonoBehaviour
 
 
         playerRB.velocity = movementInput * activeMovementSpeed;
-
-        //flipPlayerSprite(movementInput);
     }
-
-    // removed due to it bugging the animations 
-
-    //private void flipPlayerSprite(Vector2 mvmtInput)
-    //{
-    //    if(mvmtInput.x != 0)
-    //    {
-    //        if (mvmtInput.x > 0)
-    //        {
-    //            transform.localRotation = Quaternion.Euler(0, 0, 0);
-    //        }
-
-    //        else if (mvmtInput.x < 0)
-    //        {
-    //            transform.localRotation = Quaternion.Euler(0, 180, 0);
-    //        }
-    //    }
-    //}
 
     //basic dash code
     //may change

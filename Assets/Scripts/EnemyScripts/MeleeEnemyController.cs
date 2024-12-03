@@ -80,20 +80,6 @@ public class MeleeEnemyController : MonoBehaviour
         animator.SetFloat("yInput", direction.y);
     }
 
-
-    // no longer needed
-    //private void flipSprite()
-    //{
-    //    if (player.transform.position.x > transform.position.x)
-    //    {
-    //        transform.localRotation = Quaternion.Euler(0,0, 0);
-    //    }
-    //    if (player.transform.position.x < transform.position.x)
-    //    {
-    //        transform.localRotation = Quaternion.Euler(0, 180, 0);
-    //    }
-    //}
-
     private void enemyAttack()
     {
 

@@ -19,10 +19,10 @@ public class EnemyPositionManager : MonoBehaviour
 
     void Update()
     {
-        UpdateEnemyView();
+        updateEnemyView();
     }
 
-    void UpdateEnemyView()
+    void updateEnemyView()
     {
         directionToPlayer = (player.transform.position - transform.position).normalized;
 
@@ -37,6 +37,7 @@ public class EnemyPositionManager : MonoBehaviour
         }
         else if (directionToPlayer.y < 0 && Mathf.Abs(directionToPlayer.y) > Mathf.Abs(directionToPlayer.x))
         {
+
             enemyViewFront.SetActive(true);
         }
         else if (directionToPlayer.x > 0)

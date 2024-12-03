@@ -9,7 +9,15 @@ public class GunViewManager : MonoBehaviour
     public GameObject playerGunR;
     public GameObject playerGunL;
 
-    private Vector2 movementInput; 
+    public ParticleManager particle;
+
+    private Vector2 movementInput;
+
+    // Offsets for particles based on direction
+    public Vector2 offsetBack = new Vector2(0, 1);
+    public Vector2 offsetFront = new Vector2(0, -1);
+    public Vector2 offsetRight = new Vector2(1, 0);
+    public Vector2 offsetLeft = new Vector2(-1, 0);
 
     void Update()
     {
@@ -26,27 +34,27 @@ public class GunViewManager : MonoBehaviour
         playerGunR.SetActive(false);
         playerGunL.SetActive(false);
 
-        if (movementInput.y == -1 && movementInput.x == -1) 
+        if (movementInput.y == -1 && movementInput.x == -1)
         {
             playerGunL.SetActive(true);
         }
-        else if (movementInput.y == -1 && movementInput.x == 1) 
+        else if (movementInput.y == -1 && movementInput.x == 1)
         {
-            playerGunR.SetActive(true); 
+            playerGunR.SetActive(true);
         }
         else if (movementInput.y == 1 && movementInput.x == -1)
         {
-            playerGunL.SetActive(true); 
+            playerGunL.SetActive(true);
         }
-        else if (movementInput.y == 1 && movementInput.x == 1) 
+        else if (movementInput.y == 1 && movementInput.x == 1)
         {
-            playerGunR.SetActive(true); 
+            playerGunR.SetActive(true);
         }
-        else if (movementInput.y > 0) 
+        else if (movementInput.y > 0)
         {
             playerGunBack.SetActive(true);
         }
-        else if (movementInput.y < 0) 
+        else if (movementInput.y < 0)
         {
             playerGunFront.SetActive(true);
         }
@@ -58,5 +66,54 @@ public class GunViewManager : MonoBehaviour
         {
             playerGunL.SetActive(true);
         }
+    }
+
+    public void playGunParticles()
+    {
+        Vector2 spawnPosition = Vector2.zero;
+        Transform firePoint = null;
+
+        if (movementInput.y == -1 && movementInput.x == -1)
+        {
+            firePoint = playerGunL.transform;
+            spawnPosition = (Vector2)firePoint.position + offsetLeft;
+        }
+        else if (movementInput.y == -1 && movementInput.x == 1)
+        {
+            firePoint = playerGunR.transform;
+            spawnPosition = (Vector2)firePoint.position + offsetRight;
+        }
+        else if (movementInput.y == 1 && movementInput.x == -1)
+        {
+            firePoint = playerGunL.transform;
+            spawnPosition = (Vector2)firePoint.position + offsetLeft;
+        }
+        else if (movementInput.y == 1 && movementInput.x == 1)
+        {
+            firePoint = playerGunR.transform;
+            spawnPosition = (Vector2)firePoint.position + offsetRight;
+        }
+        else if (movementInput.y > 0)
+        {
+            firePoint = playerGunBack.transform;
+            spawnPosition = (Vector2)firePoint.position + offsetBack;
+        }
+        else if (movementInput.y < 0)
+        {
+            firePoint = playerGunFront.transform;
+            spawnPosition = (Vector2)firePoint.position + offsetFront;
+        }
+        else if (movementInput.x > 0)
+        {
+            firePoint = playerGunR.transform;
+            spawnPosition = (Vector2)firePoint.position + offsetRight;
+        }
+        else if (movementInput.x < 0)
+        {
+            firePoint = playerGunL.transform;
+            spawnPosition = (Vector2)firePoint.position + offsetLeft;
+        }
+
+        particle.createParticle(0, spawnPosition, 0.30f);
     }
 }
