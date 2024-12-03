@@ -9,10 +9,10 @@ public class PlayerWeaponHandler : MonoBehaviour
     public Transform pointFromFired;
 
     //different depending on the weapon
-    private int weaponAmmo;
-    private int weaponMagSize;
-    private int weaponAmmoReserve;
-    private int weaponDamage;
+    [SerializeField] private int weaponAmmo;
+    [SerializeField] private int weaponMagSize;
+    [SerializeField] private int weaponAmmoReserve;
+    [SerializeField] private int weaponDamage;
 
     // firing weapons
     public float bulletSpeed;
@@ -34,7 +34,11 @@ public class PlayerWeaponHandler : MonoBehaviour
             reloadWeapon(weaponAmmo, weaponMagSize, weaponAmmoReserve);
         }
 
-        fireWeapon();
+        if (Input.GetMouseButtonDown(0) && weaponAmmo > 0) 
+        {
+            fireWeapon();
+            Debug.Log("bullet shot");
+        }
     }
 
     private void fireWeapon()

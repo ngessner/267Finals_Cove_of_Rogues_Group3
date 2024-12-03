@@ -12,6 +12,13 @@ public class PlayerMovement : MonoBehaviour
     //used to change between dashing and normal movement
     private float activeMovementSpeed;
 
+    // Janky, but firepoints for shooting. Need this to update each state of the gun too.
+    public Transform firePointUp;
+    public Transform firePointDown;
+    public Transform firePointLeft;
+    public Transform firePointRight;
+    private Transform currentFirepoint;
+
     public Vector2 movementInput;
 
     private float dashTime = 0.5f;
@@ -40,6 +47,8 @@ public class PlayerMovement : MonoBehaviour
 
         openChest();
         checkAnimation();
+
+        updateFirepoint();
     }
 
     private void movePlayer()
@@ -138,5 +147,29 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("isWalking", true);
         }
 
+    }
+
+    private void updateFirepoint()
+    {
+        if (movementInput.x > 0) 
+        {
+            currentFirepoint = firePointRight;
+        }
+        else if (movementInput.x < 0) 
+        {
+            currentFirepoint = firePointLeft;
+        }
+        else if (movementInput.y > 0) 
+        {
+            currentFirepoint = firePointUp;
+        }
+        else if (movementInput.y < 0) 
+        {
+            currentFirepoint = firePointDown;
+        }
+    }
+    public Transform getCurrentFirepoint()
+    {
+        return currentFirepoint;
     }
 }
