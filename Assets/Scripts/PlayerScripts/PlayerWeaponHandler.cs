@@ -6,7 +6,9 @@ public class PlayerWeaponHandler : MonoBehaviour
 {
     public GameObject weaponHoldLocation;
     public GameObject bulletObj;
-    public Transform pointFromFired;
+    public Transform currentFirePoint;
+    public PlayerMovement playerMove; 
+
 
     //different depending on the weapon
     [SerializeField] private int weaponAmmo;
@@ -23,7 +25,7 @@ public class PlayerWeaponHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        weaponAmmo = weaponMagSize;
     }
 
     // Update is called once per frame
@@ -43,10 +45,12 @@ public class PlayerWeaponHandler : MonoBehaviour
 
     private void fireWeapon()
     {
-        GameObject bullet = Instantiate(bulletObj, pointFromFired.position, pointFromFired.rotation);
+        currentFirePoint = playerMove.getCurrentFirepoint();
+
+        GameObject bullet = Instantiate(bulletObj, currentFirePoint.position, currentFirePoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
 
-        rb.velocity = pointFromFired.up * bulletSpeed;
+        rb.velocity = currentFirePoint.up * bulletSpeed;
         weaponAmmo--;
 
         Debug.Log("ammo: " + weaponAmmo);
