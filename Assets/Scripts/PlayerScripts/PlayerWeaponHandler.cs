@@ -38,8 +38,7 @@ public class PlayerWeaponHandler : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0) && weaponAmmo > 0) 
         {
-            fireWeapon();
-            Debug.Log("bullet shot");
+            fireWeapon();        
         }
     }
 

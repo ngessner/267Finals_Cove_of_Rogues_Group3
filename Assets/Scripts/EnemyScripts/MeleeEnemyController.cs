@@ -12,10 +12,12 @@ public class MeleeEnemyController : MonoBehaviour
     private GameObject player;
     private Vector2 playerPos;
     private float weaponCooldown;
+    public Animator animator;
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");    
+        player = GameObject.FindGameObjectWithTag("Player");
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -23,7 +25,7 @@ public class MeleeEnemyController : MonoBehaviour
     {
         playerPos = player.transform.position;
         moveEnemy();
-        flipSprite();
+        updateAnim();
     }
 
 
@@ -56,23 +58,41 @@ public class MeleeEnemyController : MonoBehaviour
     {
         if (!canAttack())
         {
-            Vector2 playerPos = player.transform.position;
+            Vector2 direction = (playerPos - (Vector2)transform.position).normalized;
 
             transform.position = Vector2.MoveTowards(transform.position, playerPos, moveSpeed * Time.deltaTime);
+
+            animator.SetFloat("xInput", direction.x);
+            animator.SetFloat("yInput", direction.y);
+        }
+        else
+        {
+            animator.SetFloat("xInput", 0);
+            animator.SetFloat("yInput", 0);
         }
     }
 
-    private void flipSprite()
+    private void updateAnim()
     {
-        if (player.transform.position.x > transform.position.x)
-        {
-            transform.localRotation = Quaternion.Euler(0,0, 0);
-        }
-        if (player.transform.position.x < transform.position.x)
-        {
-            transform.localRotation = Quaternion.Euler(0, 180, 0);
-        }
+        Vector2 direction = playerPos - (Vector2)transform.position;
+
+        animator.SetFloat("xInput", direction.x);
+        animator.SetFloat("yInput", direction.y);
     }
+
+
+    // no longer needed
+    //private void flipSprite()
+    //{
+    //    if (player.transform.position.x > transform.position.x)
+    //    {
+    //        transform.localRotation = Quaternion.Euler(0,0, 0);
+    //    }
+    //    if (player.transform.position.x < transform.position.x)
+    //    {
+    //        transform.localRotation = Quaternion.Euler(0, 180, 0);
+    //    }
+    //}
 
     private void enemyAttack()
     {
