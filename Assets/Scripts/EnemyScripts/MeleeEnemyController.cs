@@ -8,15 +8,19 @@ public class MeleeEnemyController : MonoBehaviour
     public float moveSpeed;
     public float attackRange;
     public float attackSpeed;
+    public int attackDamage = 50;
 
     private GameObject player;
     private Vector2 playerPos;
     private float weaponCooldown;
     public Animator animator;
 
+    private PlayerHealthController playerHealthController;
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        playerHealthController = player.GetComponent<PlayerHealthController>();
         animator = GetComponent<Animator>();
     }
 
@@ -26,6 +30,11 @@ public class MeleeEnemyController : MonoBehaviour
         playerPos = player.transform.position;
         moveEnemy();
         updateAnim();
+
+        if (canAttack() && coolDownTimer())
+        {
+            enemyAttack();
+        }
     }
 
 
@@ -82,11 +91,11 @@ public class MeleeEnemyController : MonoBehaviour
 
     private void enemyAttack()
     {
-
-
-        if (canAttack() && coolDownTimer())
+        if (playerHealthController != null)
         {
-            
+            playerHealthController.applyDamage(attackDamage);
+            // cooldown reset
+            weaponCooldown = attackSpeed; 
         }
     }
 }

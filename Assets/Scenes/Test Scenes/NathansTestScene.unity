@@ -130,77 +130,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1411059297446856099, guid: 6989ab775e7a0fa45b24f6a0447ef69d, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3006846119853360660, guid: 6989ab775e7a0fa45b24f6a0447ef69d, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3544501265758996849, guid: 6989ab775e7a0fa45b24f6a0447ef69d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.04
-      objectReference: {fileID: 0}
-    - target: {fileID: 3544501265758996849, guid: 6989ab775e7a0fa45b24f6a0447ef69d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.36
-      objectReference: {fileID: 0}
-    - target: {fileID: 3544501265758996849, guid: 6989ab775e7a0fa45b24f6a0447ef69d, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.39
-      objectReference: {fileID: 0}
-    - target: {fileID: 3544501265758996849, guid: 6989ab775e7a0fa45b24f6a0447ef69d, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9200767
-      objectReference: {fileID: 0}
-    - target: {fileID: 3544501265758996849, guid: 6989ab775e7a0fa45b24f6a0447ef69d, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.39173827
-      objectReference: {fileID: 0}
-    - target: {fileID: 3544501265758996849, guid: 6989ab775e7a0fa45b24f6a0447ef69d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 46.125
-      objectReference: {fileID: 0}
     - target: {fileID: 4565580385019757890, guid: 6989ab775e7a0fa45b24f6a0447ef69d, type: 3}
       propertyPath: m_Name
       value: PirateEnemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 4565580385019757890, guid: 6989ab775e7a0fa45b24f6a0447ef69d, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4890622970418159771, guid: 6989ab775e7a0fa45b24f6a0447ef69d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4890622970418159771, guid: 6989ab775e7a0fa45b24f6a0447ef69d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 5337769416982849162, guid: 6989ab775e7a0fa45b24f6a0447ef69d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7355568884368302349, guid: 6989ab775e7a0fa45b24f6a0447ef69d, type: 3}
-      propertyPath: enemyViewBack
-      value: 
-      objectReference: {fileID: 149608181}
-    - target: {fileID: 7355568884368302349, guid: 6989ab775e7a0fa45b24f6a0447ef69d, type: 3}
-      propertyPath: enemyViewLeft
-      value: 
-      objectReference: {fileID: 2072347010}
-    - target: {fileID: 7355568884368302349, guid: 6989ab775e7a0fa45b24f6a0447ef69d, type: 3}
-      propertyPath: enemyViewFront
-      value: 
-      objectReference: {fileID: 1134092322}
-    - target: {fileID: 7355568884368302349, guid: 6989ab775e7a0fa45b24f6a0447ef69d, type: 3}
-      propertyPath: enemyViewRight
-      value: 
-      objectReference: {fileID: 1860969477}
-    - target: {fileID: 8502446382787275035, guid: 6989ab775e7a0fa45b24f6a0447ef69d, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9066613883182913627, guid: 6989ab775e7a0fa45b24f6a0447ef69d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -247,11 +179,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6989ab775e7a0fa45b24f6a0447ef69d, type: 3}
---- !u!1 &149608181 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1411059297446856099, guid: 6989ab775e7a0fa45b24f6a0447ef69d, type: 3}
-  m_PrefabInstance: {fileID: 99383884}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &150707187
 GameObject:
   m_ObjectHideFlags: 0
@@ -643,11 +570,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 892711925}
   m_CullTransparentMesh: 1
---- !u!1 &1134092322 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3006846119853360660, guid: 6989ab775e7a0fa45b24f6a0447ef69d, type: 3}
-  m_PrefabInstance: {fileID: 99383884}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1136473834
 GameObject:
   m_ObjectHideFlags: 0
@@ -893,16 +815,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &1860969477 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8502446382787275035, guid: 6989ab775e7a0fa45b24f6a0447ef69d, type: 3}
-  m_PrefabInstance: {fileID: 99383884}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2072347010 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7013042858502006674, guid: 6989ab775e7a0fa45b24f6a0447ef69d, type: 3}
-  m_PrefabInstance: {fileID: 99383884}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1829279666609367306
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -921,19 +833,19 @@ PrefabInstance:
       objectReference: {fileID: 150707192}
     - target: {fileID: 4222669226429706055, guid: cb5e388c4e146244ba5871a437a34942, type: 3}
       propertyPath: offsetBack.y
-      value: 0.5
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 4222669226429706055, guid: cb5e388c4e146244ba5871a437a34942, type: 3}
       propertyPath: offsetLeft.x
-      value: -0.5
+      value: -0.7
       objectReference: {fileID: 0}
     - target: {fileID: 4222669226429706055, guid: cb5e388c4e146244ba5871a437a34942, type: 3}
       propertyPath: offsetFront.y
-      value: -0.5
+      value: -0.7
       objectReference: {fileID: 0}
     - target: {fileID: 4222669226429706055, guid: cb5e388c4e146244ba5871a437a34942, type: 3}
       propertyPath: offsetRight.x
-      value: 0.5
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 5355668941338447571, guid: cb5e388c4e146244ba5871a437a34942, type: 3}
       propertyPath: particle

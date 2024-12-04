@@ -19,35 +19,46 @@ public class PlayerHealthController : MonoBehaviour
         
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        // just a check for the HP
+        if (health <= 0)
+        {
+            Debug.Log("player died");
+        }
+    }
+
+    public void applyDamage(int damage)
+    {
+        health -= damage;
+
+        // if the damage goes beyond the health, just set the hp to a flat zero.
+        if (health <= 0)
+        {
+            health = 0;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Projectile"))
+        if (collision.gameObject.CompareTag("Projectile"))
         {
-            health -= projectileDamageTaken;
+            applyDamage(projectileDamageTaken);
         }
 
-        //I'm almost certain there is a way to figure out the enemy that spawned the projectile
-        //If I find a way, this will change
-        if(collision.gameObject.CompareTag("BossProjectile"))
+        if (collision.gameObject.CompareTag("BossProjectile"))
         {
-            health -= projectileDamageTaken * bossDamageMultiplier;
+            applyDamage(projectileDamageTaken * bossDamageMultiplier);
         }
 
-        if(collision.gameObject.CompareTag("Melee"))
+        if (collision.gameObject.CompareTag("Melee"))
         {
-            health -= meleeDamageTaken;
+            applyDamage(meleeDamageTaken);
         }
 
-        //same as above comments
-        if(collision.gameObject.CompareTag("BossMelee"))
+        if (collision.gameObject.CompareTag("BossMelee"))
         {
-            health -= meleeDamageTaken * bossDamageMultiplier;
+            applyDamage(meleeDamageTaken * bossDamageMultiplier);
         }
     }
 }
