@@ -28,6 +28,7 @@ public class PlayerHealthController : MonoBehaviour
         }
     }
 
+    // call this anywhere to apply damage, just pass in the amount.
     public void applyDamage(int damage)
     {
         health -= damage;
@@ -45,20 +46,18 @@ public class PlayerHealthController : MonoBehaviour
         {
             applyDamage(projectileDamageTaken);
         }
-
-        if (collision.gameObject.CompareTag("BossProjectile"))
+        else if (collision.gameObject.CompareTag("BossProjectile"))
         {
             applyDamage(projectileDamageTaken * bossDamageMultiplier);
         }
-
-        if (collision.gameObject.CompareTag("Melee"))
+        else if (collision.gameObject.CompareTag("Melee"))
         {
             applyDamage(meleeDamageTaken);
         }
-
-        if (collision.gameObject.CompareTag("BossMelee"))
+        else if (collision.gameObject.CompareTag("BossMelee"))
         {
             applyDamage(meleeDamageTaken * bossDamageMultiplier);
         }
     }
+
 }

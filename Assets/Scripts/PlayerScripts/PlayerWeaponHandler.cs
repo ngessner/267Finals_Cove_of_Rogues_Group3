@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class PlayerWeaponHandler : MonoBehaviour
 {
+    // components
+    [Header("References")]
     public GameObject weaponHoldLocation;
     public GameObject bulletObj;
     public Transform currentFirePoint;
     public PlayerMovement playerMove;
     public GunViewManager gunView;
-
     public ParticleManager particle;
 
+    [Header("Weapon Stats")]
     //different depending on the weapon
     [SerializeField] private int weaponAmmo;
     [SerializeField] private int weaponMagSize;
@@ -19,6 +21,7 @@ public class PlayerWeaponHandler : MonoBehaviour
     [SerializeField] private int weaponDamage;
 
     // firing weapons
+    [Header("Firing Settings")]
     public float bulletSpeed;
 
 

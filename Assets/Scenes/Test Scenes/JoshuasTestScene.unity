@@ -176,7 +176,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 2, y: 2}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -226,7 +226,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 718321313, guid: f4f02e30f633757499bc39917a2716d2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -247,7 +247,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.02, y: 0.04, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.86742, y: 0.86742, z: 0.86742}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -449,6 +449,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponHoldLocation: {fileID: 0}
+  bulletObj: {fileID: 0}
+  currentFirePoint: {fileID: 0}
+  playerMove: {fileID: 0}
+  gunView: {fileID: 0}
+  particle: {fileID: 0}
+  weaponAmmo: 0
+  weaponMagSize: 0
+  weaponAmmoReserve: 0
+  weaponDamage: 0
+  bulletSpeed: 0
 --- !u!114 &1334391804
 MonoBehaviour:
   m_ObjectHideFlags: 0

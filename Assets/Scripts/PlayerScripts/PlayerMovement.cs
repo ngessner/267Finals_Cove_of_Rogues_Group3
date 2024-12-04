@@ -4,29 +4,33 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    // components
     private Rigidbody2D playerRB;
+    private Animator animator;
+    public ParticleManager particle;
+
+    // movement Settings
+    [Header("Movement Settings")]
     public float movementSpeed = 3f;
     public float dashForce = 4f;
-    private Animator animator;
+    private float activeMovementSpeed; // used to toggle between normal and dashing speeds
+    public Vector2 movementInput;
 
-    //used to change between dashing and normal movement
-    private float activeMovementSpeed;
+    // dash Settings
+    [Header("Dash Settings")]
+    private float dashTime = 0.5f;
+    private float dashCooldown = 1f;
+    private float dashTimer;  // dash timer
+    private float dashCooldownTimer;   // dash cd
 
-    // Janky, but firepoints for shooting. Need this to update each state of the gun too.
+    // shooting Settings
+    [Header("Shooting Settings")]
     public Transform firePointUp;
     public Transform firePointDown;
     public Transform firePointLeft;
     public Transform firePointRight;
-    private Transform currentFirepoint;
+    private Transform currentFirepoint; 
 
-    public Vector2 movementInput;
-
-    private float dashTime = 0.5f;
-    private float dashCooldown = 1f;
-
-    //timers used for the cooldown and length of the dash
-    private float dashTimer;
-    private float dashCooldownTimer;
 
     //code for player movement, dashing, and opening chests
 
@@ -83,6 +87,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 activeMovementSpeed = dashForce;
                 dashTimer = dashTime;
+                particle.createParticle(1, transform.position, 0.3f);
             }
         }
 

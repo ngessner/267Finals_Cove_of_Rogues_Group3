@@ -169,7 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sword: {fileID: 8796059232133015649}
   moveSpeed: 2
-  attackRange: 0.7
+  attackRange: 1
   attackSpeed: 1
   attackDamage: 50
   animator: {fileID: 0}
