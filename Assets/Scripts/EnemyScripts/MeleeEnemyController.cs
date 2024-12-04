@@ -73,6 +73,7 @@ public class MeleeEnemyController : MonoBehaviour
 
             animator.SetFloat("xInput", direction.x);
             animator.SetFloat("yInput", direction.y);
+            animator.SetBool("attacking", false);
         }
         else
         {
@@ -91,6 +92,8 @@ public class MeleeEnemyController : MonoBehaviour
 
     private void enemyAttack()
     {
+        animator.SetBool("attacking", true);
+
         if (playerHealthController != null)
         {
             playerHealthController.applyDamage(attackDamage);

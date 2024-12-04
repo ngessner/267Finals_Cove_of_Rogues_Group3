@@ -373,7 +373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  maxHealth: 200
+  maxHealth: 100
   projectileDamageTaken: 10
   meleeDamageTaken: 15
   bossDamageMultiplier: 2
@@ -417,6 +417,10 @@ MonoBehaviour:
   playerGunR: {fileID: 5513955502441587395}
   playerGunL: {fileID: 4267034527700707650}
   particle: {fileID: 0}
+  offsetBack: {x: 0, y: 0.7}
+  offsetFront: {x: 0, y: -0.7}
+  offsetRight: {x: 0.7, y: 0}
+  offsetLeft: {x: -0.7, y: 0}
 --- !u!1 &4267034527700707650
 GameObject:
   m_ObjectHideFlags: 0

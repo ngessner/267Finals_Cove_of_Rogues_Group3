@@ -134,6 +134,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: PirateEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 7259215034082272886, guid: 6989ab775e7a0fa45b24f6a0447ef69d, type: 3}
+      propertyPath: m_Size.x
+      value: 0.5572426
+      objectReference: {fileID: 0}
+    - target: {fileID: 7259215034082272886, guid: 6989ab775e7a0fa45b24f6a0447ef69d, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.00000046028532
+      objectReference: {fileID: 0}
+    - target: {fileID: 7492062115832501928, guid: 6989ab775e7a0fa45b24f6a0447ef69d, type: 3}
+      propertyPath: attackRange
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 9066613883182913627, guid: 6989ab775e7a0fa45b24f6a0447ef69d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.48
@@ -922,26 +934,6 @@ PrefabInstance:
       propertyPath: particle
       value: 
       objectReference: {fileID: 150707192}
-    - target: {fileID: 4222669226429706055, guid: cb5e388c4e146244ba5871a437a34942, type: 3}
-      propertyPath: offsetBack.y
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4222669226429706055, guid: cb5e388c4e146244ba5871a437a34942, type: 3}
-      propertyPath: offsetLeft.x
-      value: -0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4222669226429706055, guid: cb5e388c4e146244ba5871a437a34942, type: 3}
-      propertyPath: offsetFront.y
-      value: -0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4222669226429706055, guid: cb5e388c4e146244ba5871a437a34942, type: 3}
-      propertyPath: offsetRight.x
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4760067994904475456, guid: cb5e388c4e146244ba5871a437a34942, type: 3}
-      propertyPath: maxHealth
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 5355668941338447571, guid: cb5e388c4e146244ba5871a437a34942, type: 3}
       propertyPath: particle
       value: 
