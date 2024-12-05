@@ -21,4 +21,15 @@ public class MenuManager : MonoBehaviour
     {
         Application.Quit();
     }
+
+    // main menu
+    public void startGame()
+    {
+        SceneManager.LoadScene("PirateCampsLVL1");
+    }
+
+    public void loadOptions()
+    {
+        SceneManager.LoadScene("Options");
+    }
 }

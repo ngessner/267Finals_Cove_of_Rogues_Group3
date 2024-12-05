@@ -92,10 +92,9 @@ public class MeleeEnemyController : MonoBehaviour
 
     private void enemyAttack()
     {
-        animator.SetBool("attacking", true);
-
         if (playerHealthController != null)
         {
+            animator.SetBool("attacking", true);
             playerHealthController.applyDamage(attackDamage);
             // cooldown reset
             weaponCooldown = attackSpeed; 

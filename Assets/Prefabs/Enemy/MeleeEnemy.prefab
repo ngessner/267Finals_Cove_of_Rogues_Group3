@@ -171,7 +171,7 @@ MonoBehaviour:
   moveSpeed: 2
   attackRange: 1
   attackSpeed: 1
-  attackDamage: 50
+  attackDamage: 25
   animator: {fileID: 0}
 --- !u!70 &7259215034082272886
 CapsuleCollider2D:

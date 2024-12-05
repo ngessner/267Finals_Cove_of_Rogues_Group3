@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Game Scenes/MainMenu.unity
+    guid: ccbc5cabf4d1cfc48b8e853e3656d2b5
+  - enabled: 1
     path: Assets/Scenes/Game Scenes/PirateCampsLVL1.unity
     guid: 725c42868f10ae24b8f70d1bb1821cba
   - enabled: 1
