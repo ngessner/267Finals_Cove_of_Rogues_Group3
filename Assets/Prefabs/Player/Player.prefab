@@ -226,13 +226,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16bf0f618b5c493439efe7b431baf849, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  particle: {fileID: 0}
   movementSpeed: 3
   dashForce: 5.5
+  movementInput: {x: 0, y: 0}
   firePointUp: {fileID: 7474032115398475744}
   firePointDown: {fileID: 2158511209031892111}
   firePointLeft: {fileID: 4939382768953777566}
   firePointRight: {fileID: 4142437832554417488}
-  movementInput: {x: 0, y: 0}
 --- !u!60 &2325747471742812518
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -377,6 +378,7 @@ MonoBehaviour:
   projectileDamageTaken: 10
   meleeDamageTaken: 15
   bossDamageMultiplier: 2
+  disablePlayerF: {fileID: 0}
 --- !u!114 &5355668941338447571
 MonoBehaviour:
   m_ObjectHideFlags: 0

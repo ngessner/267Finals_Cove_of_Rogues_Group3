@@ -11,20 +11,22 @@ public class PlayerHealthController : MonoBehaviour
     public int meleeDamageTaken = 15;
     public int bossDamageMultiplier = 2;
 
+    public DisablePlayerFunctions disablePlayerF; 
+
+
     //Code for health, damage, regaining health, and ending the game when health reaches zero.
 
     // Start is called before the first frame update
     void Start()
-    {
-        
+    {    
+           
     }
 
     void Update()
     {
-        // just a check for the HP
         if (health <= 0)
         {
-            Debug.Log("player died");
+            playerDied();
         }
     }
 
@@ -59,5 +61,9 @@ public class PlayerHealthController : MonoBehaviour
             applyDamage(meleeDamageTaken * bossDamageMultiplier);
         }
     }
-
+    private void playerDied()
+    {
+        disablePlayerF.disablePlayerMechanics(health);
+        Time.timeScale = 0f; 
+    }
 }
