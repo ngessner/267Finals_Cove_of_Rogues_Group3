@@ -344,7 +344,7 @@ PrefabInstance:
     - target: {fileID: 1200085740756467533, guid: cb5e388c4e146244ba5871a437a34942, type: 3}
       propertyPath: particle
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 6495994491892807290}
     - target: {fileID: 1200085740756467533, guid: cb5e388c4e146244ba5871a437a34942, type: 3}
       propertyPath: dashForce
       value: 5.5
@@ -3488,7 +3488,7 @@ MonoBehaviour:
   sandWalkEffect: {fileID: 8300000, guid: 12acd6afb4d2f294b94333f70efad305, type: 3}
   grassWalkEffect: {fileID: 8300000, guid: 4dd9b81a3ca04a54e9b21bff87eba063, type: 3}
   woodWalkEffect: {fileID: 8300000, guid: 78de9546590b9c54f9401b7de914a3db, type: 3}
-  VolumeAmt: 0.005
+  VolumeAmt: 0.02
 --- !u!1 &4970193164870643241
 GameObject:
   m_ObjectHideFlags: 0
@@ -3742,7 +3742,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   backgroundMusic: {fileID: 8300000, guid: 2e52811eb4829e142b8f9a9f7d57d062, type: 3}
-  volumeAmt: 0.01
+  volumeAmt: 0.005
 --- !u!1 &7013042859266872847
 GameObject:
   m_ObjectHideFlags: 0

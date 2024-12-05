@@ -9,6 +9,7 @@ public class MenuManager : MonoBehaviour
     // for death menu
     public void restartGame()
     {
+        clearPlayerPrefs();
         SceneManager.LoadScene("PirateCampsLVL1"); 
     }
 
@@ -25,6 +26,7 @@ public class MenuManager : MonoBehaviour
     // main menu
     public void startGame()
     {
+        clearPlayerPrefs();
         SceneManager.LoadScene("PirateCampsLVL1");
     }
 
@@ -32,4 +34,11 @@ public class MenuManager : MonoBehaviour
     {
         SceneManager.LoadScene("Options");
     }
+
+    public void clearPlayerPrefs()
+    {
+        PlayerPrefs.DeleteKey("PlayerHealth"); 
+        PlayerPrefs.Save();
+    }
+
 }

@@ -13,18 +13,22 @@ public class PlayerHealthController : MonoBehaviour
 
     public DisablePlayerFunctions disablePlayerF; 
 
-
-    //Code for health, damage, regaining health, and ending the game when health reaches zero.
-
-    // Start is called before the first frame update
     void Start()
     {
-       
+       loadHealth();
     }
 
     private void Awake()
     {
         Time.timeScale = 1f;
+        health = 100;
+
+        // in case theres no saved health yet
+        if (!PlayerPrefs.HasKey("PlayerHealth"))
+        {
+            health = maxHealth;
+            saveHealth(); 
+        }
     }
 
     void Update()
@@ -45,6 +49,7 @@ public class PlayerHealthController : MonoBehaviour
         {
             health = 0;
         }
+        saveHealth();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -71,4 +76,14 @@ public class PlayerHealthController : MonoBehaviour
         disablePlayerF.disablePlayerMechanics(health);
         Time.timeScale = 0f; 
     }
+    public void saveHealth()
+    {
+        PlayerPrefs.SetInt("PlayerHealth", health);
+        PlayerPrefs.Save();
+    }
+
+    public void loadHealth()
+    {
+        health = PlayerPrefs.GetInt("PlayerHealth", maxHealth); 
+    }  
 }

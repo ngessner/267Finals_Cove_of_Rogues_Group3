@@ -9,6 +9,7 @@ TagManager:
   - Melee
   - BossMelee
   - BossProjectile
+  - PlayerBullet
   layers:
   - Default
   - TransparentFX
