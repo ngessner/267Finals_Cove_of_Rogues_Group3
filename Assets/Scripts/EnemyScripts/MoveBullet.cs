@@ -7,14 +7,12 @@ public class MoveBullet : MonoBehaviour
     public float bulletSpeed;
     public float bulletLife;
 
-    private GameObject player;
-    private Rigidbody2D rb;
+    //private Rigidbody2D rb;
 
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
-        rb = GetComponent<Rigidbody2D>();
+        //rb = GetComponent<Rigidbody2D>();
         Invoke("destroyBullet", bulletLife);
     }
 
