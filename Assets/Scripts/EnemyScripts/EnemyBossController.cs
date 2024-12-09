@@ -115,9 +115,10 @@ public class EnemyBossController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("PlayerBullet"))
         {
-            bossHealth -= 10;
+            bossHealth -= 20;
             fightStages();
         }
+        // destroy the bullet on hit
+        Destroy(collision.gameObject);
     }
-
 }

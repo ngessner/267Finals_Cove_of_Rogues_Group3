@@ -87,11 +87,13 @@ public class EnemyController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("PlayerBullet"))
         {
-            health -= 10;
+            health -= 25;
             if (health <= 0)
             {
-                Destroy(this.gameObject);
+                Destroy(this.gameObject); // Destroy enemy
             }
+            Destroy(collision.gameObject); // Destroy bullet
         }
     }
+
 }

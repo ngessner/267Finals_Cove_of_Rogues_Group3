@@ -106,7 +106,7 @@ public class MeleeEnemyController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("PlayerBullet"))
         {
-            health -= 10;
+            health -= 20;
             if (health <= 0)
             {
                 Destroy(this.gameObject);
