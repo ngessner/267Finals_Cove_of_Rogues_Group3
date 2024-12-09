@@ -11,6 +11,7 @@ public class EnemyBossController : MonoBehaviour
     public float weaponRange;
     public float fireRate;
 
+    private Animator animator;
 
     private GameObject player;
     private Vector2 playerPos;
@@ -23,6 +24,8 @@ public class EnemyBossController : MonoBehaviour
     {
         bossStage = 0;
         player = GameObject.FindGameObjectWithTag("Player");
+        animator = GetComponent<Animator>(); 
+
     }
 
 
@@ -78,11 +81,16 @@ public class EnemyBossController : MonoBehaviour
     {
         if (!canShoot())
         {
-            Vector2 playerPos = player.transform.position;
+            Vector2 direction = (playerPos - (Vector2)transform.position).normalized;
+
+            // for blend tree
+            animator.SetFloat("xInput", direction.x);
+            animator.SetFloat("yInput", direction.y);
 
             transform.position = Vector2.MoveTowards(transform.position, playerPos, moveSpeed * Time.deltaTime);
         }
     }
+
 
     private void fightStages()
     {
