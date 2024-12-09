@@ -9,6 +9,7 @@ public class MeleeEnemyController : MonoBehaviour
     public float attackRange;
     public float attackSpeed;
     public int attackDamage = 50;
+    public int health;
 
     private GameObject player;
     private Vector2 playerPos;
@@ -98,6 +99,18 @@ public class MeleeEnemyController : MonoBehaviour
             playerHealthController.applyDamage(attackDamage);
             // cooldown reset
             weaponCooldown = attackSpeed; 
+        }
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("PlayerBullet"))
+        {
+            health -= 10;
+            if (health <= 0)
+            {
+                Destroy(this.gameObject);
+            }
         }
     }
 }

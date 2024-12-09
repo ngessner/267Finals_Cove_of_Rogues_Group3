@@ -10,6 +10,7 @@ public class EnemyController : MonoBehaviour
     public float weaponRange;
     public float fireRate;
     public float bulletLife;
+    public int health;
     
     
     private float weaponCooldown;
@@ -79,6 +80,18 @@ public class EnemyController : MonoBehaviour
             Vector2 playerPos = player.transform.position;
 
             transform.position = Vector2.MoveTowards(transform.position, playerPos, moveSpeed * Time.deltaTime);
+        }
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("PlayerBullet"))
+        {
+            health -= 10;
+            if (health <= 0)
+            {
+                Destroy(this.gameObject);
+            }
         }
     }
 }
